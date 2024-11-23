@@ -7,8 +7,8 @@
 			
 			System.out.println("BENVENUTO/A NELLA BANCA\n");
 			System.out.println("I tuoi soldi saranno divisi tra portafoglio e banca:\n"
-					+ "il tuo stipendio che verr� dato mensilmente, \n"
-					+ "andr� nel tuo conto in banca che parte inizialmente con 0 euro, \n"
+					+ "il tuo stipendio che verra' dato mensilmente, \n"
+					+ "andra' nel tuo conto in banca che parte inizialmente con 0 euro, \n"
 					+ "e ogni mese 100 euro del tuo stipendio andranno nel tuo portafoglio, \n"
 					+ "che parte inizialmente con 100 euro.\n");
 		}
