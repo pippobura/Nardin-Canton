@@ -9,7 +9,7 @@
 			System.out.println("I tuoi soldi saranno divisi tra portafoglio e banca:\n"
 					+ "il tuo stipendio che verra' dato mensilmente, \n"
 					+ "andra' nel tuo conto in banca che parte inizialmente con 0 euro, \n"
-					+ "e ogni ese 100 euro del tuo stipendio andranno nel tuo portafoglio, \n"
+					+ "e ogni mese 100 euro del tuo stipendio andranno nel tuo portafoglio, \n"
 					+ "che parte inizialmente con 100 euro.\n");
 		}
 		//menu
