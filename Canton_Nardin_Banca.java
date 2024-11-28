@@ -180,9 +180,9 @@ public class Canton_Nardin_Banca {
 			}
 			case 5: {
 
-				int investimentoB=3;
-				int investimentoM=6;
-				int investimentoL=12;
+				int investimentoBassa=3;
+				int investimentoMedia=6;
+				int investimentoLunga=12;
 				Pause();
 				break;
 			}
