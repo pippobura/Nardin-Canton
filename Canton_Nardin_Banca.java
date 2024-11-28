@@ -26,7 +26,7 @@ public class Canton_Nardin_Banca {
 
 		System.out.println("0. ESCI\n");
 
-		System.out.print("Fai la tua scelta (0...8) : ");
+		System.out.print("Fai la tua scelta (0...6) : ");
 	}
 
 	// sotto menu investimento durata
