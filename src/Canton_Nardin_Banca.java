@@ -377,7 +377,7 @@ public class Canton_Nardin_Banca {
 
 				System.out.println(mese + " " + anno + "\n");
 				contoPortafoglio = contoPortafoglio + stipendio(stip, contoPortafoglio);
-				System.out.println("Stipendio del mese" + (mese) + ": " + stipendio(stip, contoPortafoglio));
+				System.out.println("Stipendio del mese " + (mese) + ": " + stipendio(stip, contoPortafoglio));
 				Pause();
 				break;
 			}
