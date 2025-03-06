@@ -1,0 +1,4 @@
+1. Investi in breve durata (3 mesi)
+2. Investi in media durata (6 mesi)
+3. Investi in lunga durata (12 mesi)
+Fai la tua scelta (1...3):
