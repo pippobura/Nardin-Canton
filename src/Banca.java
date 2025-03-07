@@ -24,7 +24,7 @@ public class Banca {
                 GestoreUtenti.utenti.elementAt(i).investimenti.elementAt(j).sottraiMese();
                 if(GestoreUtenti.utenti.elementAt(i).investimenti.elementAt(j).getDurata() == 0){
                     double rendimento = GestoreUtenti.utenti.elementAt(i).investimenti.elementAt(j).getRendimento();
-                    GestoreUtenti.utenti.elementAt(i).aggiungiSoldi(rendimento);
+                    GestoreUtenti.utenti.elementAt(i).aggiungiBanca(rendimento);
                     investimentiDaRimuovere.add(GestoreUtenti.utenti.elementAt(i).investimenti.elementAt(j));
                 }
             } //provare se funziona
@@ -34,7 +34,7 @@ public class Banca {
 
     private void stipendia(){
         for (int i = 0; i < GestoreUtenti.utenti.size(); i++) {
-            GestoreUtenti.utenti.elementAt(i).aggiungiSoldi(1000);
+            GestoreUtenti.utenti.elementAt(i).aggiungiPortafoglio(1000);
         }
     }
 

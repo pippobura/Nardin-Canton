@@ -35,6 +35,7 @@ public class Main {
         Menu mUtente = new Menu(2, "menuRegistrazione.txt");
         double soldi = 0;
         int registrazione;
+        int scelta;
 
         do{
 
@@ -55,7 +56,6 @@ public class Main {
         Utente utente = login();
 
         if(utente != null){
-            int scelta;
             do {
 
                 scelta = principale.setScelta();

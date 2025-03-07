@@ -6,7 +6,7 @@ public class Utente {
     private String nome;
     private String password;
     private double contoBanca = 0;
-    private double contoPortafoglio = 1000;
+    private double contoPortafoglio = 0;
     public Vector<Investimento> investimenti;
     Menu mRischio = new Menu(3,"menuRischio.txt");
 
@@ -54,8 +54,12 @@ public class Utente {
         return contoPortafoglio;
     }
 
-    public void aggiungiSoldi(double n) {
+    public void aggiungiPortafoglio(double n) {
         contoPortafoglio += n;
+    }
+
+    public void aggiungiBanca(double n){
+        contoBanca += n;
     }
 
     public double getContoBanca() {

@@ -4,26 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77342397-10d1-4008-80d5-ac97bde17cb6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Nardin-Canton.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menu.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menuDurata.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menuRegistrazione.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menuRischio.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Banca.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BancaTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DurataInvestimento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GestoreUtenti.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Investimento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Utente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Canton_Nardin_Banca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Canton_Nardin_Banca.java" afterDir="false" />
+    <list default="true" id="77342397-10d1-4008-80d5-ac97bde17cb6" name="Changes" comment="Reso ad oggetti, investimenti multipli, login e registrazione utenti, inizio test unità classe Banca">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Banca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BancaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BancaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utente.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +50,8 @@
   "keyToString": {
     "Application.Canton_Nardin_Banca.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.BancaTest.executor": "Run",
+    "JUnit.BancaTest.testStipendia.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -74,6 +62,33 @@
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
+  <component name="RunManager" selected="JUnit.BancaTest">
+    <configuration name="BancaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Nardin-Canton" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BancaTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BancaTest.testStipendia" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Nardin-Canton" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BancaTest" />
+      <option name="METHOD_NAME" value="testStipendia" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BancaTest" />
+        <item itemvalue="JUnit.BancaTest.testStipendia" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -83,6 +98,19 @@
       <option name="presentableId" value="Default" />
       <updated>1741276788662</updated>
     </task>
+    <task id="LOCAL-00001" summary="Reso ad oggetti, investimenti multipli, login e registrazione utenti, inizio test unità classe Banca">
+      <option name="closed" value="true" />
+      <created>1741278239712</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1741278239712</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Reso ad oggetti, investimenti multipli, login e registrazione utenti, inizio test unità classe Banca" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reso ad oggetti, investimenti multipli, login e registrazione utenti, inizio test unità classe Banca" />
   </component>
 </project>
