@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77342397-10d1-4008-80d5-ac97bde17cb6" name="Changes" comment="Reso ad oggetti, investimenti multipli, login e registrazione utenti, inizio test unità classe Banca">
+    <list default="true" id="77342397-10d1-4008-80d5-ac97bde17cb6" name="Changes" comment="Finiti test unita classe Banca">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Banca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BancaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BancaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.txt" beforeDir="false" afterPath="$PROJECT_DIR$/menu.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GestoreUtenti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GestoreUtenti.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Utente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utente.java" afterDir="false" />
     </list>
@@ -49,6 +50,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Canton_Nardin_Banca.executor": "Run",
+    "Application.Main.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.BancaTest.executor": "Run",
     "JUnit.BancaTest.testStipendia.executor": "Run",
@@ -62,7 +64,7 @@
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.BancaTest">
+  <component name="RunManager">
     <configuration name="BancaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Nardin-Canton" />
       <option name="PACKAGE_NAME" value="" />
@@ -106,11 +108,20 @@
       <option name="project" value="LOCAL" />
       <updated>1741278239712</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Finiti test unita classe Banca">
+      <option name="closed" value="true" />
+      <created>1741371826064</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1741371826064</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Reso ad oggetti, investimenti multipli, login e registrazione utenti, inizio test unità classe Banca" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reso ad oggetti, investimenti multipli, login e registrazione utenti, inizio test unità classe Banca" />
+    <MESSAGE value="Finiti test unita classe Banca" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finiti test unita classe Banca" />
   </component>
 </project>

@@ -10,7 +10,6 @@ public class Main {
 
     public static Utente login(){
         Scanner scanner = new Scanner(System.in);
-        GestoreUtenti.registraUtente("Ospite", "1234");
         System.out.print("Inserisci username: ");
         String nome = scanner.nextLine();
         System.out.print("Inserisci password: ");
@@ -31,11 +30,12 @@ public class Main {
 
         Banca b = new Banca();
         Scanner tastiera = new Scanner(System.in);
-        Menu principale = new Menu(7,"menu.txt");
+        Menu principale = new Menu(8,"menu.txt");
         Menu mUtente = new Menu(2, "menuRegistrazione.txt");
         double soldi = 0;
         int registrazione;
         int scelta;
+        GestoreUtenti.caricaUtenti();
 
         do{
 
@@ -181,6 +181,11 @@ public class Main {
                         break;
                     }
 
+                    case 8: {
+                        utente.mostraStoricoTransizioni();
+                        break;
+                    }
+
                     case 0: {
                         System.out.println("Arrivederci");
                         break;
@@ -197,7 +202,6 @@ public class Main {
         } else {
             System.out.println("Login fallito. Username o password errati.");
         }
-
-
+        GestoreUtenti.salvaUtenti();
     }
 }

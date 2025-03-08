@@ -7,5 +7,6 @@
 5. Preleva
 6. Avanza nel tempo
 7. Visualizza investimenti in corso
+8. Visualizza Storico Transizioni
 
 0. ESCI

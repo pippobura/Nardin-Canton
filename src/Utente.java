@@ -1,4 +1,6 @@
 
+import java.io.*;
+import java.util.Scanner;
 import java.util.Vector;
 
 public class Utente {
@@ -8,7 +10,8 @@ public class Utente {
     private double contoBanca = 0;
     private double contoPortafoglio = 0;
     public Vector<Investimento> investimenti;
-    Menu mRischio = new Menu(3,"menuRischio.txt");
+    public Vector<String> storicoTransizioni = new Vector<>();
+    private static String fileTransizioni = "transizioni";
 
     public Utente(String nome, String password){
         this.nome = nome;
@@ -21,6 +24,7 @@ public class Utente {
             System.out.println("Non hai i soldi necessari per investire!");
         }
         contoBanca -= soldi;
+        registraTransazione("Investimento di " + soldi + " per " + durata + " mesi avviato");
         Investimento nuovoInvestimento = new Investimento(soldi, durata);
         investimenti.add(nuovoInvestimento);
         System.out.println("Investimento avviato con successo!");
@@ -41,13 +45,39 @@ public class Utente {
     public void deposita(double dep) {
         contoBanca += dep;
         contoPortafoglio -= dep;
-        System.out.println("Soldi depositati con successo!");
+        registraTransazione("Depositati " + dep + " euro");
+        GestoreUtenti.salvaUtenti();
     }
 
     public void preleva(double pre) {
         contoBanca -= pre;
         contoPortafoglio += pre;
-        System.out.println("Soldi prelevati con successo!");
+        registraTransazione("Prelevati " + pre + " euro");
+        GestoreUtenti.salvaUtenti();
+    }
+
+    private void registraTransazione(String transazione){
+        storicoTransizioni.add(transazione);
+        try (PrintWriter writer = new PrintWriter(new FileWriter(fileTransizioni + nome + ".txt", true))){
+            writer.println(transazione);
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void mostraStoricoTransizioni(){
+        System.out.println("Storico transizioni di " + nome + ": ");
+        try (Scanner scanner = new Scanner(new File(fileTransizioni + nome + ".txt"))) {
+            while (scanner.hasNextLine()) {
+                System.out.println(scanner.nextLine());
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("Nessuna transizione");
+        }
+    }
+
+    public String toFileString(){
+        return nome + "," + password + "," + contoBanca + "," + contoPortafoglio;
     }
 
     public double getContoPortafoglio() {
@@ -56,14 +86,28 @@ public class Utente {
 
     public void aggiungiPortafoglio(double n) {
         contoPortafoglio += n;
+        GestoreUtenti.salvaUtenti();
+        registraTransazione("Aggiunti " + n + " euro al portafoglio");
     }
 
     public void aggiungiBanca(double n){
         contoBanca += n;
+        GestoreUtenti.salvaUtenti();
+        registraTransazione("Aggiunti " + n + " euro al conto in banca");
     }
 
     public double getContoBanca() {
         return contoBanca;
+    }
+
+    public void setContoBanca(double contoBanca) {
+        this.contoBanca = contoBanca;
+        GestoreUtenti.salvaUtenti();
+    }
+
+    public void setContoPortafoglio(double contoPortafoglio){
+        this.contoPortafoglio = contoPortafoglio;
+        GestoreUtenti.salvaUtenti();
     }
 
     public String getNome(){
