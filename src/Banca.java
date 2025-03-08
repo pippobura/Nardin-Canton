@@ -2,10 +2,10 @@ import java.util.Vector;
 
 public class Banca {
 
-    int mese = 1;
-    int anno = 2025;
+    static int mese = 1;
+    static int anno = 2025;
 
-    public void avanzaTempo() {
+    public static void avanzaTempo() {
 
         if (mese == 12) {
             mese = 1;
@@ -17,7 +17,7 @@ public class Banca {
         stipendia();
     }
 
-    private void sottraiMese(){
+    private static void sottraiMese(){
         for(int i=0;i<GestoreUtenti.utenti.size();i++){
             Vector<Investimento> investimentiDaRimuovere = new Vector<>();
             for(int j=0;j<GestoreUtenti.utenti.elementAt(i).investimenti.size();j++){
@@ -32,7 +32,7 @@ public class Banca {
         }
     }
 
-    private void stipendia(){
+    private static void stipendia(){
         for (int i = 0; i < GestoreUtenti.utenti.size(); i++) {
             GestoreUtenti.utenti.elementAt(i).aggiungiPortafoglio(1000);
         }

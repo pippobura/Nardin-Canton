@@ -28,7 +28,6 @@ public class Main {
 
     public static void main(String[] args) throws FileNotFoundException{
 
-        Banca b = new Banca();
         Scanner tastiera = new Scanner(System.in);
         Menu principale = new Menu(8,"menu.txt");
         Menu mUtente = new Menu(2, "menuRegistrazione.txt");
@@ -171,7 +170,7 @@ public class Main {
                     }
 
                     case 6: {
-                        b.avanzaTempo();
+                        Banca.avanzaTempo();
                         Pause();
                         break;
                     }

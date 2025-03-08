@@ -12,7 +12,6 @@ class BancaTest {
 
     @BeforeEach
     void setUp() {
-        banca = new Banca();
         Utente u1 = new Utente("Giorgio", "1234");
         Utente u2 = new Utente("Giovanni", "1234");
         GestoreUtenti.utenti.add(u1);
@@ -27,34 +26,34 @@ class BancaTest {
 
     @Test
     void testAvanzaMese(){
-        banca.mese = 1;
-        banca.anno = 2025;
-        banca.avanzaTempo();
+        Banca.mese = 1;
+        Banca.anno = 2025;
+        Banca.avanzaTempo();
 
-        Assertions.assertEquals(2, banca.mese, "Il mese dovrebbe essere aumentato di 1 (2)");
-        Assertions.assertEquals(2025, banca.anno, "L'anno dovrebbe essere lo stesso (2025)");
+        Assertions.assertEquals(2, Banca.mese, "Il mese dovrebbe essere aumentato di 1 (2)");
+        Assertions.assertEquals(2025, Banca.anno, "L'anno dovrebbe essere lo stesso (2025)");
     }
 
     @Test
     void testAvanzaAnno() {
-        banca.mese = 12;
-        banca.anno = 2024;
-        banca.avanzaTempo();
+        Banca.mese = 12;
+        Banca.anno = 2024;
+        Banca.avanzaTempo();
 
-        Assertions.assertEquals(1, banca.mese, "Il mese dovrebbe essere 1");
-        Assertions.assertEquals(2025, banca.anno, "L'anno dovrebbe essere aumentato di 1 (2025)");
+        Assertions.assertEquals(1, Banca.mese, "Il mese dovrebbe essere 1");
+        Assertions.assertEquals(2025, Banca.anno, "L'anno dovrebbe essere aumentato di 1 (2025)");
     }
 
     @Test
     void testStipendia(){
-        banca.avanzaTempo();
+        Banca.avanzaTempo();
         Assertions.assertEquals(contoStipendiato, GestoreUtenti.utenti.elementAt(0).getContoPortafoglio(), "Dovrebbe essere aumentato di 1000");
     }
 
     @Test
     void testSottraiMese(){
 
-        banca.avanzaTempo();
+        Banca.avanzaTempo();
         Assertions.assertEquals(contoConInvestimento, GestoreUtenti.utenti.elementAt(0).getContoBanca(), "Dovrebbe essere aggiunto il rendimento dell'investimento");
     }
 

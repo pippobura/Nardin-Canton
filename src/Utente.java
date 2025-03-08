@@ -11,7 +11,7 @@ public class Utente {
     private double contoPortafoglio = 0;
     public Vector<Investimento> investimenti;
     public Vector<String> storicoTransizioni = new Vector<>();
-    private static String fileTransizioni = "transizioni";
+    private static String fileTransazioni = "transazioni";
 
     public Utente(String nome, String password){
         this.nome = nome;
@@ -34,7 +34,6 @@ public class Utente {
     public void mostraInvestimenti(){
         if (investimenti.isEmpty()) {
             System.out.println("Nessun investimento attivo.");
-            return;
         }
         System.out.println("Investimenti attuali:");
         for (Investimento inv : investimenti) {
@@ -58,7 +57,7 @@ public class Utente {
 
     private void registraTransazione(String transazione){
         storicoTransizioni.add(transazione);
-        try (PrintWriter writer = new PrintWriter(new FileWriter(fileTransizioni + nome + ".txt", true))){
+        try (PrintWriter writer = new PrintWriter(new FileWriter(fileTransazioni + nome + ".txt", true))){
             writer.println(transazione);
         } catch (IOException e){
             e.printStackTrace();
@@ -66,8 +65,8 @@ public class Utente {
     }
 
     public void mostraStoricoTransizioni(){
-        System.out.println("Storico transizioni di " + nome + ": ");
-        try (Scanner scanner = new Scanner(new File(fileTransizioni + nome + ".txt"))) {
+        System.out.println("Storico transazioni di " + nome + ": ");
+        try (Scanner scanner = new Scanner(new File(fileTransazioni + nome + ".txt"))) {
             while (scanner.hasNextLine()) {
                 System.out.println(scanner.nextLine());
             }
