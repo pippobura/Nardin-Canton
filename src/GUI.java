@@ -4,7 +4,7 @@ import java.awt.*;
 class LoginFrame extends JFrame {
     public LoginFrame() {
         setTitle("Login Banca");
-        setSize(300, 200);
+        setSize(500, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
@@ -56,18 +56,25 @@ class DashboardFrame extends JFrame {
 
         JPanel panel = new JPanel(new GridLayout(4, 2));
         JLabel lblSaldoBanca = new JLabel("Saldo Banca: " + utente.getContoBanca());
+        lblSaldoBanca.setFont(new Font("Arial", Font.ITALIC, 25));
         JLabel lblSaldoPortafoglio = new JLabel("Saldo Portafoglio: " + utente.getContoPortafoglio());
-        JLabel lblMese = new JLabel("Mese: " + Banca.mese);
-        JLabel lblAnno = new JLabel("Anno: " + Banca.anno);
+        lblSaldoPortafoglio.setFont(new Font("Arial", Font.ITALIC, 25));
+        JLabel lblData = new JLabel("Data: " + Banca.dataAttuale);
+        lblData.setFont(new Font("Arial", Font.ITALIC, 25));
         JButton btnDeposita = new JButton("Deposita");
+        btnDeposita.setFont(new Font("Arial", Font.BOLD, 25));
         JButton btnPreleva = new JButton("Preleva");
+        btnPreleva.setFont(new Font("Arial", Font.BOLD, 25));
         JButton btnInvesti = new JButton("Investi");
+        btnInvesti.setFont(new Font("Arial", Font.BOLD, 25));
         JButton btnNextDay = new JButton("Mese Successivo");
+        btnNextDay.setFont(new Font("Arial", Font.BOLD, 25));
         JButton btnInvestimenti = new JButton("Investimenti in Corso");
+        btnInvestimenti.setFont(new Font("Arial", Font.BOLD, 25));
         JButton btnStorico = new JButton("Storico Transazioni");
+        btnStorico.setFont(new Font("Arial", Font.BOLD, 25));
 
-        panel.add(lblMese);
-        panel.add(lblAnno);
+        panel.add(lblData);
         panel.add(lblSaldoBanca);
         panel.add(lblSaldoPortafoglio);
         panel.add(btnDeposita);
@@ -79,9 +86,13 @@ class DashboardFrame extends JFrame {
         add(panel);
 
         btnDeposita.addActionListener(e -> {
-            String input = JOptionPane.showInputDialog(this, "Inserisci l'importo da depositare:");
+            String input;
+            double importo;
             try {
-                double importo = Double.parseDouble(input);
+                do{
+                    input = JOptionPane.showInputDialog(this, "Inserisci l'importo da depositare:");
+                    importo = Double.parseDouble(input);
+                } while (importo > utente.getContoPortafoglio());
                 utente.deposita(importo);
                 lblSaldoBanca.setText("Saldo Banca: " + utente.getContoBanca());
                 lblSaldoPortafoglio.setText("Saldo Portafoglio: " + utente.getContoPortafoglio());
@@ -91,9 +102,13 @@ class DashboardFrame extends JFrame {
         });
 
         btnPreleva.addActionListener(e -> {
-            String input = JOptionPane.showInputDialog(this, "Inserisci l'importo da prelevare:");
+            String input;
+            double importo;
             try {
-                double importo = Double.parseDouble(input);
+                do{
+                    input = JOptionPane.showInputDialog(this, "Inserisci l'importo da prelevare:");
+                    importo = Double.parseDouble(input);
+                } while(importo > utente.getContoBanca());
                 utente.preleva(importo);
                 lblSaldoBanca.setText("Saldo Banca: " + utente.getContoBanca());
                 lblSaldoPortafoglio.setText("Saldo Portafoglio: " + utente.getContoPortafoglio());
@@ -120,14 +135,16 @@ class DashboardFrame extends JFrame {
             Banca.avanzaTempo();
             lblSaldoBanca.setText("Saldo Banca: " + utente.getContoBanca());
             lblSaldoPortafoglio.setText("Saldo Portafoglio: " + utente.getContoPortafoglio());
+            lblData.setText("Data: " + Banca.dataAttuale);
+
         });
 
         btnInvestimenti.addActionListener(e -> {
-            JOptionPane.showMessageDialog(this, , "Investimenti in Corso", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this,utente.investimenti , "Investimenti in Corso", JOptionPane.INFORMATION_MESSAGE);
         });
 
         btnStorico.addActionListener(e -> {
-            JOptionPane.showMessageDialog(this, , "Storico Transazioni", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this,utente.storicoTransizioni , "Storico Transazioni", JOptionPane.INFORMATION_MESSAGE);
         });
 
         setVisible(true);

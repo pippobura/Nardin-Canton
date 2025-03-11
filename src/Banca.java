@@ -1,18 +1,12 @@
+import java.time.LocalDate;
 import java.util.Vector;
 
 public class Banca {
 
-    static int mese = 1;
-    static int anno = 2025;
+    static  LocalDate dataAttuale = LocalDate.of(2025, 1,1);
 
     public static void avanzaTempo() {
-
-        if (mese == 12) {
-            mese = 1;
-            anno++;
-        } else {
-            mese++;
-        }
+        dataAttuale = dataAttuale.plusMonths(1);
         sottraiMese();
         stipendia();
     }
