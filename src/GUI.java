@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 class LoginFrame extends JFrame {
     public LoginFrame() {
@@ -51,7 +53,7 @@ class DashboardFrame extends JFrame {
     public DashboardFrame(Utente utente) {
         setTitle("Dashboard - " + utente.getNome());
         setSize(400, 300);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         setLocationRelativeTo(null);
 
         JPanel panel = new JPanel(new GridLayout(4, 2));
@@ -73,6 +75,8 @@ class DashboardFrame extends JFrame {
         btnInvestimenti.setFont(new Font("Arial", Font.BOLD, 25));
         JButton btnStorico = new JButton("Storico Transazioni");
         btnStorico.setFont(new Font("Arial", Font.BOLD, 25));
+        JButton btnLogout = new JButton("Logout");
+        btnLogout.setFont(new Font("Arial", Font.BOLD, 25));
 
         panel.add(lblData);
         panel.add(lblSaldoBanca);
@@ -83,6 +87,7 @@ class DashboardFrame extends JFrame {
         panel.add(btnNextDay);
         panel.add(btnInvestimenti);
         panel.add(btnStorico);
+        panel.add(btnLogout);
         add(panel);
 
         btnDeposita.addActionListener(e -> {
@@ -145,6 +150,28 @@ class DashboardFrame extends JFrame {
 
         btnStorico.addActionListener(e -> {
             JOptionPane.showMessageDialog(this,utente.storicoTransizioni , "Storico Transazioni", JOptionPane.INFORMATION_MESSAGE);
+        });
+
+        btnLogout.addActionListener(e -> {
+
+        });
+
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                int scelta = JOptionPane.showConfirmDialog(
+                        DashboardFrame.this,
+                        "Sei sicuro di voler uscire?",
+                        "Conferma uscita",
+                        JOptionPane.YES_NO_OPTION
+                );
+
+                if (scelta == JOptionPane.YES_OPTION) {
+                    GestoreUtenti.salvaUtenti();
+                    dispose();
+                    System.exit(0);
+                }
+            }
         });
 
         setVisible(true);

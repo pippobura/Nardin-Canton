@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77342397-10d1-4008-80d5-ac97bde17cb6" name="Changes" comment="Inizio interfaccia grafica, ha ancora errori.">
+    <list default="true" id="77342397-10d1-4008-80d5-ac97bde17cb6" name="Changes" comment="Aggiunta LocalDate per gestione della data, sistemati font interfaccia grafica, controlli deposito e prelievo su interfaccia grafica">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Banca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banca.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/BancaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/BancaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utenti.txt" beforeDir="false" afterPath="$PROJECT_DIR$/utenti.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,32 +45,32 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BancaGUI.executor": "Run",
-    "Application.Canton_Nardin_Banca.executor": "Run",
-    "Application.GUI.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.BancaTest.executor": "Run",
-    "JUnit.BancaTest.testStipendia.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BancaGUI.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Canton_Nardin_Banca.executor&quot;: &quot;Run&quot;,
+    &quot;Application.GUI.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.BancaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BancaTest.testStipendia.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BancaGUI">
+  <component name="RunManager" selected="JUnit.BancaTest">
     <configuration name="BancaGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BancaGUI" />
       <module name="Nardin-Canton" />
@@ -113,10 +113,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BancaTest" />
         <item itemvalue="Application.BancaGUI" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.GUI" />
-        <item itemvalue="JUnit.BancaTest" />
         <item itemvalue="JUnit.BancaTest.testStipendia" />
       </list>
     </recent_temporary>
@@ -162,14 +162,34 @@
       <option name="project" value="LOCAL" />
       <updated>1741454146949</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Aggiunta LocalDate per gestione della data, sistemati font interfaccia grafica, controlli deposito e prelievo su interfaccia grafica">
+      <option name="closed" value="true" />
+      <created>1741703790355</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1741703790355</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Reso ad oggetti, investimenti multipli, login e registrazione utenti, inizio test unità classe Banca" />
     <MESSAGE value="Finiti test unita classe Banca" />
     <MESSAGE value="Aggiunti file per salvare utenti dopo la chiusura del programma. Aggiunta cronologia transizioni e CI" />
     <MESSAGE value="Inizio interfaccia grafica, ha ancora errori." />
-    <option name="LAST_COMMIT_MESSAGE" value="Inizio interfaccia grafica, ha ancora errori." />
+    <MESSAGE value="Aggiunta LocalDate per gestione della data, sistemati font interfaccia grafica, controlli deposito e prelievo su interfaccia grafica" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta LocalDate per gestione della data, sistemati font interfaccia grafica, controlli deposito e prelievo su interfaccia grafica" />
   </component>
 </project>
