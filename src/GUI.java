@@ -87,53 +87,105 @@ class DashboardFrame extends JFrame {
         panel.add(btnNextDay);
         panel.add(btnInvestimenti);
         panel.add(btnStorico);
-        panel.add(btnLogout);
         add(panel);
 
         btnDeposita.addActionListener(e -> {
-            String input;
-            double importo;
-            try {
-                do{
-                    input = JOptionPane.showInputDialog(this, "Inserisci l'importo da depositare:");
-                    importo = Double.parseDouble(input);
-                } while (importo > utente.getContoPortafoglio());
-                utente.deposita(importo);
-                lblSaldoBanca.setText("Saldo Banca: " + utente.getContoBanca());
-                lblSaldoPortafoglio.setText("Saldo Portafoglio: " + utente.getContoPortafoglio());
-            } catch (NumberFormatException ex) {
-                JOptionPane.showMessageDialog(this, "Inserisci un importo valido!", "Errore", JOptionPane.ERROR_MESSAGE);
-            }
+            double importo = 0;
+            do {
+                String input = JOptionPane.showInputDialog(this, "Inserisci l'importo da depositare:");
+
+                if (input == null || input.trim().isEmpty()) {
+                    JOptionPane.showMessageDialog(this, "Operazione annullata o valore non valido.", "Attenzione", JOptionPane.WARNING_MESSAGE);
+                    return;
+                }
+                try {
+                    importo = Double.parseDouble(input.trim());
+
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(this, "Inserisci un importo valido!", "Errore", JOptionPane.ERROR_MESSAGE);
+                }
+                if (importo > utente.getContoPortafoglio()){
+                    JOptionPane.showMessageDialog(this, "Valore troppo alto.", "Attenzione", JOptionPane.WARNING_MESSAGE);
+                }
+            }while (importo > utente.getContoPortafoglio());
+
+            utente.deposita(importo);
+            lblSaldoBanca.setText("Saldo Banca: " + utente.getContoBanca());
+            lblSaldoPortafoglio.setText("Saldo Portafoglio: " + utente.getContoPortafoglio());
         });
 
         btnPreleva.addActionListener(e -> {
-            String input;
-            double importo;
-            try {
-                do{
-                    input = JOptionPane.showInputDialog(this, "Inserisci l'importo da prelevare:");
-                    importo = Double.parseDouble(input);
-                } while(importo > utente.getContoBanca());
-                utente.preleva(importo);
-                lblSaldoBanca.setText("Saldo Banca: " + utente.getContoBanca());
-                lblSaldoPortafoglio.setText("Saldo Portafoglio: " + utente.getContoPortafoglio());
-            } catch (NumberFormatException ex) {
-                JOptionPane.showMessageDialog(this, "Inserisci un importo valido!", "Errore", JOptionPane.ERROR_MESSAGE);
-            }
+            double importo = 0;
+            do {
+                String input = JOptionPane.showInputDialog(this, "Inserisci l'importo da prelevare:");
+
+                if (input == null || input.trim().isEmpty()) {
+                    JOptionPane.showMessageDialog(this, "Operazione annullata o valore non valido.", "Attenzione", JOptionPane.WARNING_MESSAGE);
+                    return;
+                }
+                try {
+                    importo = Double.parseDouble(input.trim());
+
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(this, "Inserisci un importo valido!", "Errore", JOptionPane.ERROR_MESSAGE);
+                }
+                if (importo > utente.getContoBanca()){
+                    JOptionPane.showMessageDialog(this, "Valore troppo alto.", "Attenzione", JOptionPane.WARNING_MESSAGE);
+                }
+            }while (importo > utente.getContoBanca());
+
+            utente.preleva(importo);
+            lblSaldoBanca.setText("Saldo Banca: " + utente.getContoBanca());
+            lblSaldoPortafoglio.setText("Saldo Portafoglio: " + utente.getContoPortafoglio());
         });
 
         btnInvesti.addActionListener(e -> {
-            String inputImporto = JOptionPane.showInputDialog(this, "Inserisci l'importo da investire:");
-            String inputDurata = JOptionPane.showInputDialog(this, "Inserisci la durata dell'investimento: ");
-            try {
-                double importo = Double.parseDouble(inputImporto);
-                int durata = Integer.parseInt(inputDurata);
-                utente.investi(importo, durata); // Assumendo che tu abbia un metodo 'investi' nella classe Utente
-                lblSaldoBanca.setText("Saldo Banca: " + utente.getContoBanca());
-                lblSaldoPortafoglio.setText("Saldo Portafoglio: " + utente.getContoPortafoglio());
-            } catch (NumberFormatException ex) {
-                JOptionPane.showMessageDialog(this, "Inserisci un importo valido!", "Errore", JOptionPane.ERROR_MESSAGE);
-            }
+            double importo = 0;
+            int durata;
+            int risultato = 0;
+            do {
+                String input = JOptionPane.showInputDialog(this, "Inserisci l'importo da Investire:");
+
+                if (input == null || input.trim().isEmpty()) {
+                    JOptionPane.showMessageDialog(this, "Operazione annullata o valore non valido.", "Attenzione", JOptionPane.WARNING_MESSAGE);
+                    return;
+                }
+
+                String[] opzioni = {"3 Mesi", "6 Mesi", "12 Mesi"};
+
+                durata = JOptionPane.showOptionDialog(
+                        null,
+                        "Scegli una durata per l'investimento:",
+                        "Menu Durata",
+                        JOptionPane.DEFAULT_OPTION,
+                        JOptionPane.INFORMATION_MESSAGE,
+                        null,
+                        opzioni,
+                        opzioni[0]
+                );
+
+                if (durata == 0) {
+                    risultato = 3;
+                } else if (durata == 1) {
+                    risultato = 6;
+                } else if (durata == 2) {
+                    risultato = 12;
+                }
+
+                try {
+                    importo = Double.parseDouble(input.trim());
+
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(this, "Inserisci un importo valido!", "Errore", JOptionPane.ERROR_MESSAGE);
+                }
+                if (importo > utente.getContoBanca()){
+                    JOptionPane.showMessageDialog(this, "Valore troppo alto.", "Attenzione", JOptionPane.WARNING_MESSAGE);
+                }
+            }while (importo > utente.getContoBanca());
+
+            utente.investi(importo, risultato);
+            lblSaldoBanca.setText("Saldo Banca: " + utente.getContoBanca());
+            lblSaldoPortafoglio.setText("Saldo Portafoglio: " + utente.getContoPortafoglio());
         });
 
         btnNextDay.addActionListener(e -> {
@@ -145,16 +197,20 @@ class DashboardFrame extends JFrame {
         });
 
         btnInvestimenti.addActionListener(e -> {
-            JOptionPane.showMessageDialog(this,utente.investimenti , "Investimenti in Corso", JOptionPane.INFORMATION_MESSAGE);
+            StringBuilder sb = new StringBuilder("Investimenti in Corso:\n");
+            for (Investimento i : utente.investimenti) {
+                sb.append(i).append("\n");
+            }
+            JOptionPane.showMessageDialog(this, sb.toString(), "Investimenti in Corso", JOptionPane.INFORMATION_MESSAGE);
         });
 
         btnStorico.addActionListener(e -> {
-            JOptionPane.showMessageDialog(this,utente.storicoTransizioni , "Storico Transazioni", JOptionPane.INFORMATION_MESSAGE);
-        });
-
-        btnLogout.addActionListener(e -> {
-
-        });
+            StringBuilder sb = new StringBuilder("Storico Transizioni:\n");
+            for (String s : utente.storicoTransizioni) {
+            sb.append(s).append("\n");
+            }
+            JOptionPane.showMessageDialog(this,sb.toString() , "Storico Transazioni", JOptionPane.INFORMATION_MESSAGE);
+        }  );
 
         addWindowListener(new WindowAdapter() {
             @Override

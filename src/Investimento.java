@@ -34,4 +34,8 @@ public class Investimento {
     public int getDurata() {
         return durata;
     }
+
+    public String toString(){
+        return "Investimento di: " + capitale + " euro, " + durata + " mesi rimanenti";
+    }
 }
