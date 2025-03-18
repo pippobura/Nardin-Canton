@@ -4,30 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77342397-10d1-4008-80d5-ac97bde17cb6" name="Changes" comment="Controlli deposita preleva e investimento, menu scelta durata e sistemato layout mostra investimenti in corso e storico transizioni">
-      <change afterPath="$PROJECT_DIR$/src/main/Banca.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/BancaGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Canton_Nardin_Banca.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/DurataInvestimento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/GUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/GestoreUtenti.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Investimento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Utente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
+    <list default="true" id="77342397-10d1-4008-80d5-ac97bde17cb6" name="Changes" comment="CI corretta">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Banca.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/BancaGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Canton_Nardin_Banca.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DurataInvestimento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/GUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/GestoreUtenti.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Investimento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Nardin-Canton.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Nardin-Canton.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Banca.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BancaGUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Canton_Nardin_Banca.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DurataInvestimento.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GestoreUtenti.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Investimento.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utente.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/BancaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/BancaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Banca.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/BancaGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Canton_Nardin_Banca.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/DurataInvestimento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GestoreUtenti.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Investimento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Menu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Utente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/BancaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/BancaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utenti.txt" beforeDir="false" afterPath="$PROJECT_DIR$/utenti.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,27 +65,32 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.BancaGUI.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Canton_Nardin_Banca.executor&quot;: &quot;Run&quot;,
-    &quot;Application.GUI.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;JUnit.BancaTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BancaTest.testStipendia.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BancaGUI.executor": "Run",
+    "Application.Canton_Nardin_Banca.executor": "Run",
+    "Application.GUI.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.main.BancaGUI.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.BancaTest.executor": "Run",
+    "JUnit.BancaTest.testStipendia.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/Filippo/Desktop/Il mio PC (LAPTOP-FHI5HAK2)/Desktop/Programmazione/Java/Nardin-Canton/src/main/java",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Filippo\Desktop\Il mio PC (LAPTOP-FHI5HAK2)\Desktop\Programmazione\Java\Nardin-Canton\test\java" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
@@ -111,6 +117,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="main.java.BancaGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.BancaGUI" />
+      <module name="Nardin-Canton" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BancaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Nardin-Canton" />
       <option name="PACKAGE_NAME" value="" />
@@ -120,23 +139,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BancaTest.testStipendia" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Nardin-Canton" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BancaTest" />
-      <option name="METHOD_NAME" value="testStipendia" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.BancaGUI" />
+        <item itemvalue="Application.main.java.BancaGUI" />
         <item itemvalue="JUnit.BancaTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.GUI" />
-        <item itemvalue="JUnit.BancaTest.testStipendia" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742038931689</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="CI corretta">
+      <option name="closed" value="true" />
+      <created>1742304770711</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1742304770711</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -227,6 +244,7 @@
     <MESSAGE value="Aggiunta LocalDate per gestione della data, sistemati font interfaccia grafica, controlli deposito e prelievo su interfaccia grafica" />
     <MESSAGE value="Uscita e tasto logout senza logica" />
     <MESSAGE value="Controlli deposita preleva e investimento, menu scelta durata e sistemato layout mostra investimenti in corso e storico transizioni" />
-    <option name="LAST_COMMIT_MESSAGE" value="Controlli deposita preleva e investimento, menu scelta durata e sistemato layout mostra investimenti in corso e storico transizioni" />
+    <MESSAGE value="CI corretta" />
+    <option name="LAST_COMMIT_MESSAGE" value="CI corretta" />
   </component>
 </project>

@@ -1,4 +1,7 @@
 package main;
+import main.java.Banca;
+import main.java.Investimento;
+import main.java.Utente;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
