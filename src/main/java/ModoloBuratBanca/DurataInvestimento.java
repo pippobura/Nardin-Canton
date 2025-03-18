@@ -1,3 +1,5 @@
+package ModoloBuratBanca;
+
 import java.io.FileNotFoundException;
 
 public class DurataInvestimento {

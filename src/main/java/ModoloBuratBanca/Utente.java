@@ -1,3 +1,5 @@
+package ModoloBuratBanca;
+
 import java.io.*;
 import java.util.Scanner;
 import java.util.Vector;
@@ -23,10 +25,10 @@ public class Utente {
             System.out.println("Non hai i soldi necessari per investire!");
         }
         contoBanca -= soldi;
-        registraTransazione("Investimento di " + soldi + " per " + durata + " mesi avviato");
+        registraTransazione("ModoloBuratBanca.Investimento di " + soldi + " per " + durata + " mesi avviato");
         Investimento nuovoInvestimento = new Investimento(soldi, durata);
         investimenti.add(nuovoInvestimento);
-        System.out.println("Investimento avviato con successo!");
+        System.out.println("ModoloBuratBanca.Investimento avviato con successo!");
 
     }
 

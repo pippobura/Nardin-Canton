@@ -1,3 +1,5 @@
+package ModoloBuratBanca;
+
 import javax.swing.*;
 
 public class BancaGUI {

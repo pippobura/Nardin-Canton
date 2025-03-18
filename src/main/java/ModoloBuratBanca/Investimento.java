@@ -1,3 +1,5 @@
+package ModoloBuratBanca;
+
 public class Investimento {
     private double capitale;
     private int durata;
@@ -36,6 +38,6 @@ public class Investimento {
     }
 
     public String toString(){
-        return "Investimento di: " + capitale + " euro, " + durata + " mesi rimanenti";
+        return "ModoloBuratBanca.Investimento di: " + capitale + " euro, " + durata + " mesi rimanenti";
     }
 }

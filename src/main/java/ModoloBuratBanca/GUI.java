@@ -1,3 +1,5 @@
+package ModoloBuratBanca;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
@@ -5,7 +7,7 @@ import java.awt.event.WindowEvent;
 
 class LoginFrame extends JFrame {
     public LoginFrame() {
-        setTitle("Login Banca");
+        setTitle("Login ModoloBuratBanca.Banca");
         setSize(500, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -57,7 +59,7 @@ class DashboardFrame extends JFrame {
         setLocationRelativeTo(null);
 
         JPanel panel = new JPanel(new GridLayout(4, 2));
-        JLabel lblSaldoBanca = new JLabel("Saldo Banca: " + utente.getContoBanca());
+        JLabel lblSaldoBanca = new JLabel("Saldo ModoloBuratBanca.Banca: " + utente.getContoBanca());
         lblSaldoBanca.setFont(new Font("Arial", Font.ITALIC, 25));
         JLabel lblSaldoPortafoglio = new JLabel("Saldo Portafoglio: " + utente.getContoPortafoglio());
         lblSaldoPortafoglio.setFont(new Font("Arial", Font.ITALIC, 25));
@@ -110,7 +112,7 @@ class DashboardFrame extends JFrame {
             }while (importo > utente.getContoPortafoglio());
 
             utente.deposita(importo);
-            lblSaldoBanca.setText("Saldo Banca: " + utente.getContoBanca());
+            lblSaldoBanca.setText("Saldo ModoloBuratBanca.Banca: " + utente.getContoBanca());
             lblSaldoPortafoglio.setText("Saldo Portafoglio: " + utente.getContoPortafoglio());
         });
 
@@ -135,7 +137,7 @@ class DashboardFrame extends JFrame {
             }while (importo > utente.getContoBanca());
 
             utente.preleva(importo);
-            lblSaldoBanca.setText("Saldo Banca: " + utente.getContoBanca());
+            lblSaldoBanca.setText("Saldo ModoloBuratBanca.Banca: " + utente.getContoBanca());
             lblSaldoPortafoglio.setText("Saldo Portafoglio: " + utente.getContoPortafoglio());
         });
 
@@ -156,7 +158,7 @@ class DashboardFrame extends JFrame {
                 durata = JOptionPane.showOptionDialog(
                         null,
                         "Scegli una durata per l'investimento:",
-                        "Menu Durata",
+                        "ModoloBuratBanca.Menu Durata",
                         JOptionPane.DEFAULT_OPTION,
                         JOptionPane.INFORMATION_MESSAGE,
                         null,
@@ -184,13 +186,13 @@ class DashboardFrame extends JFrame {
             }while (importo > utente.getContoBanca());
 
             utente.investi(importo, risultato);
-            lblSaldoBanca.setText("Saldo Banca: " + utente.getContoBanca());
+            lblSaldoBanca.setText("Saldo ModoloBuratBanca.Banca: " + utente.getContoBanca());
             lblSaldoPortafoglio.setText("Saldo Portafoglio: " + utente.getContoPortafoglio());
         });
 
         btnNextDay.addActionListener(e -> {
             Banca.avanzaTempo();
-            lblSaldoBanca.setText("Saldo Banca: " + utente.getContoBanca());
+            lblSaldoBanca.setText("Saldo ModoloBuratBanca.Banca: " + utente.getContoBanca());
             lblSaldoPortafoglio.setText("Saldo Portafoglio: " + utente.getContoPortafoglio());
             lblData.setText("Data: " + Banca.dataAttuale);
 

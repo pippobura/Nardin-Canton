@@ -1,4 +1,4 @@
-package main.java;
+package ModoloBuratBanca;
 import java.util.Scanner;
 
 public class Canton_Nardin_Banca {

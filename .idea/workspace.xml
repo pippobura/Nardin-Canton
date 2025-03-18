@@ -4,30 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77342397-10d1-4008-80d5-ac97bde17cb6" name="Changes" comment="CI corretta">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Banca.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/BancaGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Canton_Nardin_Banca.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DurataInvestimento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/GUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/GestoreUtenti.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Investimento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Utente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Nardin-Canton.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Nardin-Canton.iml" afterDir="false" />
+    <list default="true" id="77342397-10d1-4008-80d5-ac97bde17cb6" name="Changes" comment="CI corretta 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Banca.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/BancaGUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Canton_Nardin_Banca.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/DurataInvestimento.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GestoreUtenti.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Investimento.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Menu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Utente.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/BancaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/BancaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Banca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/Banca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BancaGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/BancaGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Canton_Nardin_Banca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/Canton_Nardin_Banca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DurataInvestimento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/DurataInvestimento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GestoreUtenti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/GestoreUtenti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Investimento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/Investimento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/Utente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utenti.txt" beforeDir="false" afterPath="$PROJECT_DIR$/utenti.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +85,7 @@
   </component>
   <component name="RunManager" selected="Application.BancaGUI">
     <configuration name="BancaGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BancaGUI" />
+      <option name="MAIN_CLASS_NAME" value="ModoloBuratBanca.BancaGUI" />
       <module name="Nardin-Canton" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -111,7 +99,7 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="ModoloBuratBanca.Main" />
       <module name="Nardin-Canton" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -122,7 +110,7 @@
       <module name="Nardin-Canton" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.java.*" />
+          <option name="PATTERN" value="ModoloBuratBanca.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -222,7 +210,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742304770711</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="CI corretta 2">
+      <option name="closed" value="true" />
+      <created>1742306437487</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1742306437487</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -245,6 +241,7 @@
     <MESSAGE value="Uscita e tasto logout senza logica" />
     <MESSAGE value="Controlli deposita preleva e investimento, menu scelta durata e sistemato layout mostra investimenti in corso e storico transizioni" />
     <MESSAGE value="CI corretta" />
-    <option name="LAST_COMMIT_MESSAGE" value="CI corretta" />
+    <MESSAGE value="CI corretta 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="CI corretta 2" />
   </component>
 </project>
