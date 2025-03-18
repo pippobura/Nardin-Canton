@@ -1,3 +1,5 @@
+package main;
+
 public class Investimento {
     private double capitale;
     private int durata;

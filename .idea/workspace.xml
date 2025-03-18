@@ -4,12 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77342397-10d1-4008-80d5-ac97bde17cb6" name="Changes" comment="Uscita e tasto logout senza logica">
+    <list default="true" id="77342397-10d1-4008-80d5-ac97bde17cb6" name="Changes" comment="Controlli deposita preleva e investimento, menu scelta durata e sistemato layout mostra investimenti in corso e storico transizioni">
+      <change afterPath="$PROJECT_DIR$/src/main/Banca.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/BancaGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Canton_Nardin_Banca.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/DurataInvestimento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/GUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/GestoreUtenti.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Investimento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Utente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Banca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Investimento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Investimento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utenti.txt" beforeDir="false" afterPath="$PROJECT_DIR$/utenti.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Banca.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BancaGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Canton_Nardin_Banca.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DurataInvestimento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GestoreUtenti.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Investimento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/BancaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/BancaTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742032321864</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Controlli deposita preleva e investimento, menu scelta durata e sistemato layout mostra investimenti in corso e storico transizioni">
+      <option name="closed" value="true" />
+      <created>1742038931689</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1742038931689</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -200,6 +226,7 @@
     <MESSAGE value="Inizio interfaccia grafica, ha ancora errori." />
     <MESSAGE value="Aggiunta LocalDate per gestione della data, sistemati font interfaccia grafica, controlli deposito e prelievo su interfaccia grafica" />
     <MESSAGE value="Uscita e tasto logout senza logica" />
-    <option name="LAST_COMMIT_MESSAGE" value="Uscita e tasto logout senza logica" />
+    <MESSAGE value="Controlli deposita preleva e investimento, menu scelta durata e sistemato layout mostra investimenti in corso e storico transizioni" />
+    <option name="LAST_COMMIT_MESSAGE" value="Controlli deposita preleva e investimento, menu scelta durata e sistemato layout mostra investimenti in corso e storico transizioni" />
   </component>
 </project>
