@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Nardin-Canton.iml" filepath="$PROJECT_DIR$/.idea/Nardin-Canton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ITIS_Maven_Example.iml" filepath="$PROJECT_DIR$/ITIS_Maven_Example.iml" />
     </modules>
   </component>
 </project>

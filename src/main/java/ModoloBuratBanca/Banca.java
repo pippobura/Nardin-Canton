@@ -1,5 +1,3 @@
-package ModoloBuratBanca;
-
 import java.time.LocalDate;
 import java.util.Vector;
 
@@ -24,7 +22,7 @@ public class Banca {
           GestoreUtenti.utenti.elementAt(i).aggiungiBanca(rendimento);
           investimentiDaRimuovere.add(GestoreUtenti.utenti.elementAt(i).investimenti.elementAt(j));
         }
-      } // provare se funziona
+      }
       GestoreUtenti.utenti.elementAt(i).investimenti.removeAll(investimentiDaRimuovere);
     }
   }

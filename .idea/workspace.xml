@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77342397-10d1-4008-80d5-ac97bde17cb6" name="Changes" comment="CI corretta 5">
+    <list default="true" id="77342397-10d1-4008-80d5-ac97bde17cb6" name="Changes" comment="CI corretta 6">
+      <change beforePath="$PROJECT_DIR$/.idea/Nardin-Canton.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/BancaGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/BancaGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/Canton_Nardin_Banca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/Canton_Nardin_Banca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/DurataInvestimento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/DurataInvestimento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/GestoreUtenti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/GestoreUtenti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/Banca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/Banca.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/Investimento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/Investimento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/Utente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/Utente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utenti.txt" beforeDir="false" afterPath="$PROJECT_DIR$/utenti.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +51,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.BancaGUI (1).executor": "Run",
     "Application.BancaGUI.executor": "Run",
     "Application.Canton_Nardin_Banca.executor": "Run",
     "Application.GUI.executor": "Run",
@@ -69,7 +69,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/Filippo/Desktop/Il mio PC (LAPTOP-FHI5HAK2)/Desktop/Programmazione/Java/Nardin-Canton/src/main/java",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.notifications"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -80,16 +80,16 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BancaGUI">
-    <configuration name="BancaGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ModoloBuratBanca.BancaGUI" />
-      <module name="Nardin-Canton" />
+  <component name="RunManager" selected="Application.BancaGUI (1)">
+    <configuration name="BancaGUI (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BancaGUI" />
+      <module name="ITIS_Maven_Example" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GUI" />
+    <configuration name="BancaGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ModoloBuratBanca.BancaGUI" />
       <module name="Nardin-Canton" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -126,11 +126,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BancaGUI (1)" />
         <item itemvalue="Application.BancaGUI" />
         <item itemvalue="Application.main.java.BancaGUI" />
         <item itemvalue="JUnit.BancaTest" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.GUI" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742307920299</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="CI corretta 6">
+      <option name="closed" value="true" />
+      <created>1742308638169</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1742308638169</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -266,6 +274,7 @@
     <MESSAGE value="CI corretta 3" />
     <MESSAGE value="CI corretta 4" />
     <MESSAGE value="CI corretta 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="CI corretta 5" />
+    <MESSAGE value="CI corretta 6" />
+    <option name="LAST_COMMIT_MESSAGE" value="CI corretta 6" />
   </component>
 </project>
