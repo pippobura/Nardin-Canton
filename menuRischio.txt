@@ -1,4 +1,0 @@
-1. Investimenti di basso rischio e basso guadagno
-2. Investimenti di medio rischio e medio guadagno
-3. Investimenti di alto rischio e alto guadagno
-Fai la tua scelta (1...3):

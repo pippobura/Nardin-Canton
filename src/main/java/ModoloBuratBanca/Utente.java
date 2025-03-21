@@ -10,7 +10,7 @@ public class Utente {
   private double contoPortafoglio = 0;
   public Vector<Investimento> investimenti;
   public Vector<String> storicoTransizioni = new Vector<>();
-  private static final String fileTransazioni = "transazioni";
+  private static final String fileTransazioni = "data/transazioni";
 
   public Utente(String nome, String password) {
     this.nome = nome;
@@ -24,10 +24,9 @@ public class Utente {
     }
     contoBanca -= soldi;
     registraTransazione(
-        "ModoloBuratBanca.Investimento di " + soldi + " per " + durata + " mesi avviato");
+        "Investimento di " + soldi + " per " + durata + " mesi avviato");
     Investimento nuovoInvestimento = new Investimento(soldi, durata);
     investimenti.add(nuovoInvestimento);
-    System.out.println("ModoloBuratBanca.Investimento avviato con successo!");
   }
 
   public void mostraInvestimenti() {

@@ -5,11 +5,16 @@ import javax.swing.*;
 
 class LoginFrame extends JFrame {
   public LoginFrame() {
-    setTitle("Login ModoloBuratBanca.Banca");
+    setTitle("Login Banca");
     setSize(500, 300);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setLocationRelativeTo(null);
+    ImageIcon icon = new ImageIcon("data/icona.jpg");
+    setIconImage(icon.getImage());
 
+    ImageIcon imageIcon = new ImageIcon("logoBanca.jpg");
+    JLabel lblImage = new JLabel(imageIcon);
+    lblImage.setHorizontalAlignment(SwingConstants.CENTER);
     JPanel panel = new JPanel(new GridLayout(3, 2));
     JLabel lblUser = new JLabel("Username:");
     JTextField txtUser = new JTextField();
@@ -18,6 +23,7 @@ class LoginFrame extends JFrame {
     JButton btnLogin = new JButton("Login");
     JButton btnRegister = new JButton("Registrati");
 
+    panel.add(lblImage);
     panel.add(lblUser);
     panel.add(txtUser);
     panel.add(lblPass);
@@ -44,6 +50,16 @@ class LoginFrame extends JFrame {
         e -> {
           String username = txtUser.getText();
           String password = new String(txtPass.getPassword());
+
+          if (password.length() < 5) {
+            JOptionPane.showMessageDialog(
+                this,
+                "La password deve essere di almeno 5 caratteri",
+                "Errore",
+                JOptionPane.ERROR_MESSAGE);
+            return;
+          }
+
           GestoreUtenti.registraUtente(username, password);
           JOptionPane.showMessageDialog(this, "Registrazione completata!");
         });
@@ -55,31 +71,33 @@ class LoginFrame extends JFrame {
 class DashboardFrame extends JFrame {
   public DashboardFrame(Utente utente) {
     setTitle("Dashboard - " + utente.getNome());
-    setSize(400, 300);
+    setSize(900, 600);
     setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
     setLocationRelativeTo(null);
+    ImageIcon icon = new ImageIcon("data/icona.jpg");
+    setIconImage(icon.getImage());
 
     JPanel panel = new JPanel(new GridLayout(4, 2));
-    JLabel lblSaldoBanca = new JLabel("Saldo ModoloBuratBanca.Banca: " + utente.getContoBanca());
-    lblSaldoBanca.setFont(new Font("Arial", Font.ITALIC, 25));
+    JLabel lblSaldoBanca = new JLabel("Saldo Banca: " + utente.getContoBanca());
+    lblSaldoBanca.setFont(new Font("Arial", Font.ITALIC, 15));
     JLabel lblSaldoPortafoglio = new JLabel("Saldo Portafoglio: " + utente.getContoPortafoglio());
-    lblSaldoPortafoglio.setFont(new Font("Arial", Font.ITALIC, 25));
+    lblSaldoPortafoglio.setFont(new Font("Arial", Font.ITALIC, 15));
     JLabel lblData = new JLabel("Data: " + Banca.dataAttuale);
-    lblData.setFont(new Font("Arial", Font.ITALIC, 25));
+    lblData.setFont(new Font("Arial", Font.ITALIC, 15));
     JButton btnDeposita = new JButton("Deposita");
-    btnDeposita.setFont(new Font("Arial", Font.BOLD, 25));
+    btnDeposita.setFont(new Font("Arial", Font.BOLD, 15));
     JButton btnPreleva = new JButton("Preleva");
-    btnPreleva.setFont(new Font("Arial", Font.BOLD, 25));
+    btnPreleva.setFont(new Font("Arial", Font.BOLD, 15));
     JButton btnInvesti = new JButton("Investi");
-    btnInvesti.setFont(new Font("Arial", Font.BOLD, 25));
+    btnInvesti.setFont(new Font("Arial", Font.BOLD, 15));
     JButton btnNextDay = new JButton("Mese Successivo");
-    btnNextDay.setFont(new Font("Arial", Font.BOLD, 25));
+    btnNextDay.setFont(new Font("Arial", Font.BOLD, 15));
     JButton btnInvestimenti = new JButton("Investimenti in Corso");
-    btnInvestimenti.setFont(new Font("Arial", Font.BOLD, 25));
+    btnInvestimenti.setFont(new Font("Arial", Font.BOLD, 15));
     JButton btnStorico = new JButton("Storico Transazioni");
-    btnStorico.setFont(new Font("Arial", Font.BOLD, 25));
+    btnStorico.setFont(new Font("Arial", Font.BOLD, 15));
     JButton btnLogout = new JButton("Logout");
-    btnLogout.setFont(new Font("Arial", Font.BOLD, 25));
+    btnLogout.setFont(new Font("Arial", Font.BOLD, 15));
 
     panel.add(lblData);
     panel.add(lblSaldoBanca);
@@ -95,127 +113,132 @@ class DashboardFrame extends JFrame {
     btnDeposita.addActionListener(
         e -> {
           double importo = 0;
-          do {
-            String input = JOptionPane.showInputDialog(this, "Inserisci l'importo da depositare:");
+          String input = JOptionPane.showInputDialog(this, "Inserisci l'importo da depositare:");
 
-            if (input == null || input.trim().isEmpty()) {
-              JOptionPane.showMessageDialog(
-                  this,
-                  "Operazione annullata o valore non valido.",
-                  "Attenzione",
-                  JOptionPane.WARNING_MESSAGE);
-              return;
-            }
-            try {
-              importo = Double.parseDouble(input.trim());
+          if (input == null || input.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(
+                this,
+                "Operazione annullata o valore non valido.",
+                "Attenzione",
+                JOptionPane.WARNING_MESSAGE);
+            return;
+          }
+          try {
+            importo = Double.parseDouble(input.trim());
 
-            } catch (NumberFormatException ex) {
-              JOptionPane.showMessageDialog(
-                  this, "Inserisci un importo valido!", "Errore", JOptionPane.ERROR_MESSAGE);
-            }
-            if (importo > utente.getContoPortafoglio()) {
-              JOptionPane.showMessageDialog(
-                  this, "Valore troppo alto.", "Attenzione", JOptionPane.WARNING_MESSAGE);
-            }
-          } while (importo > utente.getContoPortafoglio());
+          } catch (NumberFormatException ex) {
+            JOptionPane.showMessageDialog(
+                this, "Inserisci un importo valido!", "Errore", JOptionPane.ERROR_MESSAGE);
+            return;
+          }
+          if (importo > utente.getContoPortafoglio()) {
+            JOptionPane.showMessageDialog(
+                this, "Valore troppo alto.", "Attenzione", JOptionPane.WARNING_MESSAGE);
+            return;
+          }
 
           utente.deposita(importo);
-          lblSaldoBanca.setText("Saldo ModoloBuratBanca.Banca: " + utente.getContoBanca());
+          lblSaldoBanca.setText("Saldo Banca: " + utente.getContoBanca());
           lblSaldoPortafoglio.setText("Saldo Portafoglio: " + utente.getContoPortafoglio());
         });
 
     btnPreleva.addActionListener(
         e -> {
           double importo = 0;
-          do {
-            String input = JOptionPane.showInputDialog(this, "Inserisci l'importo da prelevare:");
+          String input = JOptionPane.showInputDialog(this, "Inserisci l'importo da prelevare:");
 
-            if (input == null || input.trim().isEmpty()) {
-              JOptionPane.showMessageDialog(
-                  this,
-                  "Operazione annullata o valore non valido.",
-                  "Attenzione",
-                  JOptionPane.WARNING_MESSAGE);
-              return;
-            }
-            try {
-              importo = Double.parseDouble(input.trim());
+          if (input == null || input.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(
+                this,
+                "Operazione annullata o valore non valido.",
+                "Attenzione",
+                JOptionPane.WARNING_MESSAGE);
+            return;
+          }
+          try {
+            importo = Double.parseDouble(input.trim());
 
-            } catch (NumberFormatException ex) {
-              JOptionPane.showMessageDialog(
-                  this, "Inserisci un importo valido!", "Errore", JOptionPane.ERROR_MESSAGE);
-            }
-            if (importo > utente.getContoBanca()) {
-              JOptionPane.showMessageDialog(
-                  this, "Valore troppo alto.", "Attenzione", JOptionPane.WARNING_MESSAGE);
-            }
-          } while (importo > utente.getContoBanca());
+          } catch (NumberFormatException ex) {
+            JOptionPane.showMessageDialog(
+                this, "Inserisci un importo valido!", "Errore", JOptionPane.ERROR_MESSAGE);
+            return;
+          }
+          if (importo > utente.getContoBanca()) {
+            JOptionPane.showMessageDialog(
+                this, "Valore troppo alto.", "Attenzione", JOptionPane.WARNING_MESSAGE);
+            return;
+          }
 
           utente.preleva(importo);
-          lblSaldoBanca.setText("Saldo ModoloBuratBanca.Banca: " + utente.getContoBanca());
+          lblSaldoBanca.setText("Saldo Banca: " + utente.getContoBanca());
           lblSaldoPortafoglio.setText("Saldo Portafoglio: " + utente.getContoPortafoglio());
         });
 
     btnInvesti.addActionListener(
         e -> {
-          double importo = 0;
+          double importo;
           int durata;
           int risultato = 0;
-          do {
-            String input = JOptionPane.showInputDialog(this, "Inserisci l'importo da Investire:");
 
-            if (input == null || input.trim().isEmpty()) {
-              JOptionPane.showMessageDialog(
-                  this,
-                  "Operazione annullata o valore non valido.",
-                  "Attenzione",
-                  JOptionPane.WARNING_MESSAGE);
-              return;
-            }
+          String input = JOptionPane.showInputDialog(this, "Inserisci l'importo da investire:");
 
-            String[] opzioni = {"3 Mesi", "6 Mesi", "12 Mesi"};
+          if (input == null || input.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(
+                this,
+                "Operazione annullata o valore non valido.",
+                "Attenzione",
+                JOptionPane.WARNING_MESSAGE);
+            return;
+          }
 
-            durata =
-                JOptionPane.showOptionDialog(
-                    null,
-                    "Scegli una durata per l'investimento:",
-                    "ModoloBuratBanca.Menu Durata",
-                    JOptionPane.DEFAULT_OPTION,
-                    JOptionPane.INFORMATION_MESSAGE,
-                    null,
-                    opzioni,
-                    opzioni[0]);
+          try {
+            importo = Double.parseDouble(input.trim());
+          } catch (NumberFormatException ex) {
+            JOptionPane.showMessageDialog(
+                this, "Inserisci un importo valido!", "Errore", JOptionPane.ERROR_MESSAGE);
+            return;
+          }
 
-            if (durata == 0) {
-              risultato = 3;
-            } else if (durata == 1) {
-              risultato = 6;
-            } else if (durata == 2) {
-              risultato = 12;
-            }
+          if (importo > utente.getContoBanca()) {
+            JOptionPane.showMessageDialog(
+                this, "Valore troppo alto.", "Attenzione", JOptionPane.WARNING_MESSAGE);
+            return;
+          }
 
-            try {
-              importo = Double.parseDouble(input.trim());
+          String[] opzioni = {"3 Mesi", "6 Mesi", "12 Mesi"};
+          durata =
+              JOptionPane.showOptionDialog(
+                  null,
+                  "Scegli una durata per l'investimento:",
+                  "Menu Durata",
+                  JOptionPane.DEFAULT_OPTION,
+                  JOptionPane.INFORMATION_MESSAGE,
+                  null,
+                  opzioni,
+                  opzioni[0]);
 
-            } catch (NumberFormatException ex) {
-              JOptionPane.showMessageDialog(
-                  this, "Inserisci un importo valido!", "Errore", JOptionPane.ERROR_MESSAGE);
-            }
-            if (importo > utente.getContoBanca()) {
-              JOptionPane.showMessageDialog(
-                  this, "Valore troppo alto.", "Attenzione", JOptionPane.WARNING_MESSAGE);
-            }
-          } while (importo > utente.getContoBanca());
+          if (durata == 0) {
+            risultato = 3;
+          } else if (durata == 1) {
+            risultato = 6;
+          } else if (durata == 2) {
+            risultato = 12;
+          }
 
-          utente.investi(importo, risultato);
-          lblSaldoBanca.setText("Saldo ModoloBuratBanca.Banca: " + utente.getContoBanca());
-          lblSaldoPortafoglio.setText("Saldo Portafoglio: " + utente.getContoPortafoglio());
+          if (risultato > 0) {
+            utente.investi(importo, risultato);
+            lblSaldoBanca.setText("Saldo : " + utente.getContoBanca());
+            lblSaldoPortafoglio.setText("Saldo Portafoglio: " + utente.getContoPortafoglio());
+          } else {
+            JOptionPane.showMessageDialog(
+                this, "Durata non valida.", "Errore", JOptionPane.ERROR_MESSAGE);
+          }
         });
 
     btnNextDay.addActionListener(
         e -> {
           Banca.avanzaTempo();
-          lblSaldoBanca.setText("Saldo ModoloBuratBanca.Banca: " + utente.getContoBanca());
+          lblSaldoBanca.setText("Saldo Banca: " + utente.getContoBanca());
           lblSaldoPortafoglio.setText("Saldo Portafoglio: " + utente.getContoPortafoglio());
           lblData.setText("Data: " + Banca.dataAttuale);
         });
@@ -253,6 +276,7 @@ class DashboardFrame extends JFrame {
 
             if (scelta == JOptionPane.YES_OPTION) {
               GestoreUtenti.salvaUtenti();
+              Banca.salvaData("data/data.txt");
               dispose();
               System.exit(0);
             }

@@ -4,7 +4,7 @@ import java.util.Vector;
 
 class GestoreUtenti {
   public static Vector<Utente> utenti = new Vector<>();
-  private static final String fileUtenti = "utenti.txt";
+  private static final String fileUtenti = "data/utenti.txt";
 
   public static void registraUtente(String nome, String password) {
     utenti.add(new Utente(nome, password));

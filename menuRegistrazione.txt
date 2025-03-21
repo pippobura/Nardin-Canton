@@ -1,3 +1,0 @@
-1. Registrati
-2. Vai al login
-Fai la tua scelta (1...2):
