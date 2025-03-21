@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77342397-10d1-4008-80d5-ac97bde17cb6" name="Changes" comment="CI corretta 7">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/java/BancaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BancaTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="77342397-10d1-4008-80d5-ac97bde17cb6" name="Changes" comment="CI corretta 8" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,6 +65,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Filippo\Desktop\Il mio PC (LAPTOP-FHI5HAK2)\Desktop\Programmazione\Java\Nardin-Canton\src" />
       <recent name="C:\Users\Filippo\Desktop\Il mio PC (LAPTOP-FHI5HAK2)\Desktop\Programmazione\Java\Nardin-Canton\test\java" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -249,7 +247,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742576212818</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="CI corretta 8">
+      <option name="closed" value="true" />
+      <created>1742578161117</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1742578161117</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -278,6 +284,7 @@
     <MESSAGE value="CI corretta 5" />
     <MESSAGE value="CI corretta 6" />
     <MESSAGE value="CI corretta 7" />
-    <option name="LAST_COMMIT_MESSAGE" value="CI corretta 7" />
+    <MESSAGE value="CI corretta 8" />
+    <option name="LAST_COMMIT_MESSAGE" value="CI corretta 8" />
   </component>
 </project>

@@ -1,5 +1,3 @@
-
-
 public class Investimento {
   private final double capitale;
   private int durata;
