@@ -13,7 +13,11 @@ public class Banca {
   public static void caricaData(String filePath) {
     try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
       String[] dataString = reader.readLine().split("-");
-      dataAttuale = LocalDate.of(Integer.parseInt(dataString[0]), Integer.parseInt(dataString[1]), Integer.parseInt(dataString[2]));
+      dataAttuale =
+          LocalDate.of(
+              Integer.parseInt(dataString[0]),
+              Integer.parseInt(dataString[1]),
+              Integer.parseInt(dataString[2]));
     } catch (IOException e) {
       System.err.println("Errore nel caricamento della data: " + e.getMessage());
     }

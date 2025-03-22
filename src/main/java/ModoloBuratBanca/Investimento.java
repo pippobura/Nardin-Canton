@@ -17,6 +17,9 @@ public class Investimento {
           case 12 -> 1.15; // 15% di interesse per 12 mesi
           default -> 1.00;
         };
+    if ((Math.random() * 100) < 50) {
+      return -(capitale * tasso);
+    }
     return capitale * tasso;
   }
 
@@ -37,6 +40,6 @@ public class Investimento {
   }
 
   public String toString() {
-    return "ModoloBuratBanca.Investimento di: " + capitale + " euro, " + durata + " mesi rimanenti";
+    return "Investimento di: " + capitale + " euro, " + durata + " mesi rimanenti";
   }
 }

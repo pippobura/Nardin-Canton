@@ -77,7 +77,7 @@ class DashboardFrame extends JFrame {
     ImageIcon icon = new ImageIcon("data/icona.jpg");
     setIconImage(icon.getImage());
 
-    JPanel panel = new JPanel(new GridLayout(4, 2));
+    JPanel panel = new JPanel(new GridLayout(3, 2));
     JLabel lblSaldoBanca = new JLabel("Saldo Banca: " + utente.getContoBanca());
     lblSaldoBanca.setFont(new Font("Arial", Font.ITALIC, 15));
     JLabel lblSaldoPortafoglio = new JLabel("Saldo Portafoglio: " + utente.getContoPortafoglio());
@@ -112,7 +112,7 @@ class DashboardFrame extends JFrame {
 
     btnDeposita.addActionListener(
         e -> {
-          double importo = 0;
+          double importo;
           String input = JOptionPane.showInputDialog(this, "Inserisci l'importo da depositare:");
 
           if (input == null || input.trim().isEmpty()) {
@@ -144,7 +144,7 @@ class DashboardFrame extends JFrame {
 
     btnPreleva.addActionListener(
         e -> {
-          double importo = 0;
+          double importo;
           String input = JOptionPane.showInputDialog(this, "Inserisci l'importo da prelevare:");
 
           if (input == null || input.trim().isEmpty()) {

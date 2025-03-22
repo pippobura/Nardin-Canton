@@ -36,7 +36,7 @@ class UtenteTest {
   @Test
   void testInvestiFallito() {
     utente.investi(2000, 6);
-    assertEquals(1000, utente.getContoBanca()); //Fondi insufficenti
+    assertEquals(1000, utente.getContoBanca()); // Fondi insufficenti
     assertEquals(0, utente.investimenti.size());
   }
 
