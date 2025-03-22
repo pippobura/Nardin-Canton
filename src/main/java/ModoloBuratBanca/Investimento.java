@@ -2,10 +2,12 @@ public class Investimento {
   private final double capitale;
   private int durata;
   private final double rendimento;
+  private final double rischio;
 
-  public Investimento(double capitale, int durata) {
+  public Investimento(double capitale, int durata, double rischio) {
     this.capitale = capitale;
     this.durata = durata;
+    this.rischio = rischio;
     this.rendimento = calcolaRendimento();
   }
 
@@ -18,9 +20,11 @@ public class Investimento {
           default -> 1.00;
         };
     if ((Math.random() * 100) < 50) {
-      return -(capitale * tasso);
+      double risultato = capitale * tasso * rischio;
+      return -Math.round(risultato * 100.0) / 100.0;
     }
-    return capitale * tasso;
+    double risultato = capitale * tasso * rischio;
+    return Math.round(risultato * 100.0) / 100.0;
   }
 
   public double getRendimento() {
@@ -37,6 +41,10 @@ public class Investimento {
 
   public int getDurata() {
     return durata;
+  }
+
+  public double getRischio() {
+    return rischio;
   }
 
   public String toString() {

@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77342397-10d1-4008-80d5-ac97bde17cb6" name="Changes" comment="aggiunto salvataggio su file csv, modifica al sistema di investimenti: aggiunta possibilità di perdere" />
+    <list default="true" id="77342397-10d1-4008-80d5-ac97bde17cb6" name="Changes" comment="CI corretta 10">
+      <change afterPath="$PROJECT_DIR$/src/main/data/data.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/data/logoBanca.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/data/utenti.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/icona.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/data/icona.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/logoBanca.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/Banca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/Banca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/BancaGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/BancaGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/GestoreUtenti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/GestoreUtenti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/Investimento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/Investimento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/Utente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModoloBuratBanca/Utente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ModoloBuratBanca/BancaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ModoloBuratBanca/BancaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ModoloBuratBanca/GestoreUtentiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ModoloBuratBanca/GestoreUtentiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ModoloBuratBanca/InvestimentoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ModoloBuratBanca/InvestimentoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ModoloBuratBanca/UtenteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ModoloBuratBanca/UtenteTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,75 +58,51 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.BancaGUI (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.BancaGUI.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Canton_Nardin_Banca.executor&quot;: &quot;Run&quot;,
-    &quot;Application.GUI.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.main.BancaGUI.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;JUnit.BancaTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BancaTest.testStipendia.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GestoreUtentiTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.InvestimentoTest.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/Filippo/Desktop/Il mio PC (LAPTOP-FHI5HAK2)/Desktop/Programmazione/Java/Nardin-Canton/src/main/java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.notifications&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BancaGUI (1).executor": "Run",
+    "Application.BancaGUI.executor": "Run",
+    "Application.Canton_Nardin_Banca.executor": "Run",
+    "Application.GUI.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.main.BancaGUI.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.BancaTest.executor": "Run",
+    "JUnit.BancaTest.testCaricaData.executor": "Run",
+    "JUnit.BancaTest.testStipendia.executor": "Run",
+    "JUnit.GestoreUtentiTest.executor": "Run",
+    "JUnit.InvestimentoTest.executor": "Run",
+    "JUnit.InvestimentoTest.testRendimento.executor": "Run",
+    "JUnit.ModoloBuratBanca in ITIS_Maven_Example.executor": "Run",
+    "JUnit.UtenteTest.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/Filippo/Desktop/Il mio PC (LAPTOP-FHI5HAK2)/Desktop/Programmazione/Java/Nardin-Canton/src/main/java",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.notifications"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Filippo\Desktop\Il mio PC (LAPTOP-FHI5HAK2)\Desktop\Programmazione\Java\Nardin-Canton\src\main\data" />
+      <recent name="C:\Users\Filippo\Desktop\Il mio PC (LAPTOP-FHI5HAK2)\Desktop\Programmazione\Java\Nardin-Canton\src\main" />
       <recent name="C:\Users\Filippo\Desktop\Il mio PC (LAPTOP-FHI5HAK2)\Desktop\Programmazione\Java\Nardin-Canton\data" />
       <recent name="C:\Users\Filippo\Desktop\Il mio PC (LAPTOP-FHI5HAK2)\Desktop\Programmazione\Java\Nardin-Canton" />
       <recent name="C:\Users\Filippo\Desktop\Il mio PC (LAPTOP-FHI5HAK2)\Desktop\Programmazione\Java\Nardin-Canton\src" />
-      <recent name="C:\Users\Filippo\Desktop\Il mio PC (LAPTOP-FHI5HAK2)\Desktop\Programmazione\Java\Nardin-Canton\test\java" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BancaGUI (1)">
+  <component name="RunManager" selected="JUnit.ModoloBuratBanca in ITIS_Maven_Example">
     <configuration name="BancaGUI (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BancaGUI" />
       <module name="ITIS_Maven_Example" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BancaGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ModoloBuratBanca.BancaGUI" />
-      <module name="Nardin-Canton" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="main.java.BancaGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.java.BancaGUI" />
-      <module name="Nardin-Canton" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ModoloBuratBanca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GestoreUtentiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ITIS_Maven_Example" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GestoreUtentiTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -122,13 +116,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="InvestimentoTest.testRendimento" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ITIS_Maven_Example" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="InvestimentoTest" />
+      <option name="METHOD_NAME" value="testRendimento" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ModoloBuratBanca in ITIS_Maven_Example" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ITIS_Maven_Example" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/ModoloBuratBanca" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UtenteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ITIS_Maven_Example" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UtenteTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BancaGUI (1)" />
+        <item itemvalue="JUnit.ModoloBuratBanca in ITIS_Maven_Example" />
         <item itemvalue="JUnit.InvestimentoTest" />
-        <item itemvalue="JUnit.GestoreUtentiTest" />
-        <item itemvalue="Application.BancaGUI" />
-        <item itemvalue="Application.main.java.BancaGUI" />
+        <item itemvalue="JUnit.InvestimentoTest.testRendimento" />
+        <item itemvalue="Application.BancaGUI (1)" />
+        <item itemvalue="JUnit.UtenteTest" />
       </list>
     </recent_temporary>
   </component>
@@ -285,7 +306,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742640955325</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="CI corretta 10">
+      <option name="closed" value="true" />
+      <created>1742641455089</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1742641455089</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -318,6 +347,7 @@
     <MESSAGE value="CI corretta 9" />
     <MESSAGE value="Miglioramenti vari all interfaccia e ai controlli" />
     <MESSAGE value="aggiunto salvataggio su file csv, modifica al sistema di investimenti: aggiunta possibilità di perdere" />
-    <option name="LAST_COMMIT_MESSAGE" value="aggiunto salvataggio su file csv, modifica al sistema di investimenti: aggiunta possibilità di perdere" />
+    <MESSAGE value="CI corretta 10" />
+    <option name="LAST_COMMIT_MESSAGE" value="CI corretta 10" />
   </component>
 </project>

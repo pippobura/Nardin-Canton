@@ -8,7 +8,7 @@ public class BancaGUI {
       e.printStackTrace();
     }
     GestoreUtenti.caricaUtenti();
-    Banca.caricaData("data/data.txt");
+    Banca.caricaData("src/main/data/data.txt");
     SwingUtilities.invokeLater(LoginFrame::new);
   }
 }

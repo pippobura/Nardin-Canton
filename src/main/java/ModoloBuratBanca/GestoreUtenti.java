@@ -4,7 +4,7 @@ import java.util.Vector;
 
 class GestoreUtenti {
   public static Vector<Utente> utenti = new Vector<>();
-  private static final String fileUtenti = "data/utenti.txt";
+  private static final String fileUtenti = "src/main/data/utenti.txt";
 
   public static void registraUtente(String nome, String password) {
     utenti.add(new Utente(nome, password));
@@ -20,6 +20,15 @@ class GestoreUtenti {
       }
     }
     return null;
+  }
+
+  public static boolean utenteEsistente(String username) {
+    for (int i = 0; i < utenti.size(); i++) {
+      if (username.equals(utenti.elementAt(i).getNome())) {
+        return false;
+      }
+    }
+    return true;
   }
 
   public static void salvaUtenti() {

@@ -39,17 +39,21 @@ public class Banca {
 
   private static void sottraiMese() {
     for (int i = 0; i < GestoreUtenti.utenti.size(); i++) {
+      Utente utente = GestoreUtenti.utenti.get(i);
+      Vector<Investimento> investimenti = utente.investimenti;
       Vector<Investimento> investimentiDaRimuovere = new Vector<>();
-      for (int j = 0; j < GestoreUtenti.utenti.elementAt(i).investimenti.size(); j++) {
-        GestoreUtenti.utenti.elementAt(i).investimenti.elementAt(j).sottraiMese();
-        if (GestoreUtenti.utenti.elementAt(i).investimenti.elementAt(j).getDurata() == 0) {
-          double rendimento =
-              GestoreUtenti.utenti.elementAt(i).investimenti.elementAt(j).getRendimento();
-          GestoreUtenti.utenti.elementAt(i).aggiungiBanca(rendimento);
-          investimentiDaRimuovere.add(GestoreUtenti.utenti.elementAt(i).investimenti.elementAt(j));
+
+      for (int j = 0; j < investimenti.size(); j++) {
+        Investimento investimento = investimenti.get(j);
+        investimento.sottraiMese();
+
+        if (investimento.getDurata() == 0) {
+          utente.aggiungiBanca(investimento.getRendimento());
+          investimentiDaRimuovere.add(investimento);
         }
       }
-      GestoreUtenti.utenti.elementAt(i).investimenti.removeAll(investimentiDaRimuovere);
+
+      investimenti.removeAll(investimentiDaRimuovere);
     }
   }
 

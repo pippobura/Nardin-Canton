@@ -1,51 +1,93 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.time.LocalDate;
-import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class BancaTest {
-
-  double contoStipendiato;
-  double contoConInvestimento;
-  double contoBancaPrima;
-  double contoPortafoglioPrima;
+public class BancaTest {
+  private static final String TEST_FILE = "test_data.txt";
 
   @BeforeEach
-  void setUp() {
-    Utente u1 = new Utente("Giorgio", "1234");
-    GestoreUtenti.utenti.add(u1);
-    contoBancaPrima = GestoreUtenti.utenti.elementAt(0).getContoBanca();
-    contoPortafoglioPrima = GestoreUtenti.utenti.elementAt(0).getContoPortafoglio();
-    Investimento i1 = new Investimento(100, 1);
-    GestoreUtenti.utenti.elementAt(0).investimenti.add(i1);
-    contoStipendiato = contoPortafoglioPrima + 1000;
-    contoConInvestimento =
-        contoBancaPrima
-            + GestoreUtenti.utenti.elementAt(0).investimenti.elementAt(0).getRendimento();
+  public void setUp() {
+    Banca.dataAttuale = LocalDate.of(2025, 1, 1);
   }
 
   @Test
-  void testAvanzaMese() {
-    Banca.avanzaTempo();
-    Assertions.assertEquals(
-        LocalDate.of(2025, 2, 1), Banca.dataAttuale, "Il mese dovrebbe essere aumentato di 1 (2)");
+  public void testCaricaData() throws IOException {
+    Files.writeString(Path.of(TEST_FILE), "2024-12-31");
+    Banca.caricaData(TEST_FILE);
+    assertEquals(
+        LocalDate.of(2024, 12, 31),
+        Banca.dataAttuale,
+        "La data dovrebbe essere caricata correttamente");
   }
 
   @Test
-  void testStipendia() {
-    Banca.avanzaTempo();
-    Assertions.assertEquals(
-        contoStipendiato,
-        GestoreUtenti.utenti.elementAt(0).getContoPortafoglio(),
-        "Dovrebbe essere aumentato di 1000");
+  public void testSalvaData() throws IOException {
+    Banca.salvaData(TEST_FILE);
+    String dataSalvata = Files.readString(Path.of(TEST_FILE)).trim();
+    assertEquals(
+        "2025-01-01", dataSalvata, "La data salvata dovrebbe corrispondere a quella attuale");
   }
 
   @Test
-  void testSottraiMese() {
+  public void testAvanzaTempo() {
+    LocalDate dataIniziale = Banca.dataAttuale;
     Banca.avanzaTempo();
-    Assertions.assertEquals(
-        contoConInvestimento,
-        GestoreUtenti.utenti.elementAt(0).getContoBanca(),
-        "Dovrebbe essere aggiunto il rendimento dell'investimento");
+    assertEquals(
+        dataIniziale.plusMonths(1), Banca.dataAttuale, "La data dovrebbe avanzare di un mese");
+  }
+
+  @Test
+  public void testSottraiMese() {
+    GestoreUtenti.utenti.clear();
+    Utente utente = new Utente("TestUser", "1234");
+    Investimento inv = new Investimento(1000, 1, 1.2);
+    utente.investimenti.add(inv);
+    GestoreUtenti.utenti.add(utente);
+
+    Banca.avanzaTempo();
+
+    assertEquals(
+        0, inv.getDurata(), "La durata dell'investimento dovrebbe essere zero dopo un mese");
+    assertFalse(utente.investimenti.contains(inv), "L'investimento dovrebbe essere rimosso");
+  }
+
+  @Test
+  public void testStipendia() {
+    GestoreUtenti.utenti.clear();
+    Utente utente = new Utente("TestUser", "1234");
+    GestoreUtenti.utenti.add(utente);
+
+    double saldoPrecedente = utente.getContoPortafoglio();
+    Banca.avanzaTempo();
+
+    assertEquals(
+        saldoPrecedente + 1000,
+        utente.getContoPortafoglio(),
+        "Lo stipendio dovrebbe essere accreditato");
+  }
+
+  @Test
+  public void testFileNonEsistente() {
+    String nonExistingFile = "non_existing_file.txt";
+    Banca.caricaData(nonExistingFile);
+    assertEquals(
+        LocalDate.of(2025, 1, 1),
+        Banca.dataAttuale,
+        "Se il file non esiste, la data dovrebbe rimanere invariata");
+  }
+
+  @AfterAll
+  public static void deleteFiles() {
+    File f = new File("data/utenti.txt");
+    f.delete();
+    File f1 = new File("transazioniTestUser.txt");
+    f1.delete();
   }
 }
